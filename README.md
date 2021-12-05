@@ -23,6 +23,6 @@ Ensure that
 ---------
 #### Screenshot of Demo Application:
 
-![img.png](img.png)
+![image](https://user-images.githubusercontent.com/49061096/144748901-44b238ea-f1f4-44df-8719-62f846a9631a.png)
 
 
