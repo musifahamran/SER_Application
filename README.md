@@ -17,6 +17,8 @@ Ensure that
 3. To use different pretrained models, change the variable in main
 4. Run the project
 
+Example .wav files have been provided in static/uploads folder.
+
 ---------
 #### Note: This application is an incomplete demo to test classificaiton of the SER models trained from https://github.com/musifahamran/FYP
 
