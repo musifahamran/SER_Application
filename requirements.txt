@@ -58,6 +58,7 @@ prompt-toolkit==3.0.4
 ptyprocess==0.6.0
 Pygments==2.5.2
 pyparsing==2.4.7
+pysndfx==0.3.6
 python-dateutil==2.8.1
 pytz==2020.1
 PyWavelets==1.1.1
