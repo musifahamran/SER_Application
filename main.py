@@ -125,6 +125,8 @@ def get_prediction(filename):
         print("Prediction classes: ", prediction[0])
 
     emotion = get_emotion(prediction[0])
+
+    #Remove converted files after prediction is done
     os.remove("{}/{}.wav".format(file_dest,tail))
     os.remove("{}/{}.pkl".format(file_dest,tail))
     return "Audio File is classified as " + emotion + " emotion"
