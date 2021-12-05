@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask app</title>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+  </head>
+   <body>
+   <p>
+       <h1>
+           Speech Emotion Classifier
+       </h1>
+   </p>
+   <p1>
+
+      <form action = "/" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+          <input type="hidden" name="btn_identifier" value="submit_btn" />
+         <input type = "submit"/>
+
+       <div>
+           {% if filename %}
+            <audio src = "{{ url_for('display_audio', filename=filename) }}" type="file/mpeg" controls>
+            Your browser does not support the audio element.
+            </audio>
+
+            {% endif %}
+       </div>
+
+      </form>
+   </p1>
+    {% if filename %}
+   <form action = "/" method = "POST">
+    <input type="hidden" name="btn_identifier" value="classify_btn" />
+    <input type="submit" value="Classify">
+    </form>
+   {% endif %}
+     <p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  {{ message }}
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+
+   </p>
+<!--     <form action = "/" method = "POST"-->
+<!--         enctype = "multipart/form-data">-->
+<!--         <input type = "file" name = "file" />-->
+<!--         <input type = "submit"/>-->
+<!--     </form>-->
+
+   </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Home Page</title>
+</head>
+<body>
+<h1> SER Demo</h1>
+<h4>Speech Emotion Classifier</h4>
+<form method="POST" action="">
+    <input type="Audio" name="pass" placeholder="audioFile">
+    <input type="submit" value="Submit" name="ok" click="extractFeature()"/>
+     <script>
+        function extractFeature(){
+            print("Hello World);
+             alert("finished python script");
+        }
+    </script>
+</form>
+<script type=text/javascript>
+        $(function() {
+          $('a#test').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/predict',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+</script>
+<div class='container'>
+    <h3>Test</h3>
+        <form>
+            <a href=/predict id=test><button class='btn btn-default'>Test</button></a>
+        </form>
+
+</div>
+<a href="/predict">SUCCESS</a>
+</body>
+</html>
